@@ -13,13 +13,13 @@
 ---
 ### onos_app文件夹
 
-#####1. choice-best-path
-+ 提供北向接口graph,用于获取以端口为节点的基本的拓扑信息。
+##### 1. choice-best-path
++ 提供北向接口graph,用于获取逻辑拓扑，即以端口为节点的基本的拓扑信息。
 
-#####2. device-and-host
-+ 提供北向接口devicehost,用于获取交换机信息和与它相连的主机信息
+##### 2. device-and-host
++ 提供北向接口devicehost,用于获取物理拓扑，即交换机信息和与它相连的主机信息
 
-#####3. get-link-delay
+##### 3. get-link-delay
 
 + 提供北向接口GetDelay，用于获取交换机与交换机之间链路的时延信息
 
@@ -29,11 +29,11 @@
 maven，onos，onos-app脚本
 
 ##### 安装步骤
-1. 在app文件夹目录下执行 mvn clean install 
+1. 在app文件夹目录下执行 mvn clean install，已有target目录也可以不执行这一步 
 2. build成功后在对应的target目录下执行<br>
  ``path/onos-app <ip> install! xxxx.oar``<br>
 比如安装编译好的get-link-delay，在target目录下执行:<br>
-``~(你的路径)/path_project/script/onos-app 192.168.89.130 install! get-link-delay-1.0.oar``
+``~(你的路径)/onos/script/onos-app 192.168.89.130 install! get-link-delay-1.0.oar``
 3. 返回一个json格式的文本信息即为安装成功
 
 ---
